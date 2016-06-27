@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+        <head>
+                <title>Mi primera web</title>
+        </head>
+        <body>
+        	<div align="center">
+            <form>
+                <table border=1>
+                	<caption><h2>Calculadora</h2></caption>
+                	
+                   <script> 
+                    window.onload=function(){
+                        
+                      var n1=0; //tipo var variable global
+                      var n2=0;
+                      var ope=""; 
+                        
+                        var num = document.getElementById("TxtRes"); 
+                        document.getElementById("b1").onclick=function(){
+                           num.value += "1";
+                        }//b1
+                        
+                       document.getElementById("b2").onclick=function(){  
+                           num.value += "2";
+                        }//b2 
+                        
+                        document.getElementById("b3").onclick=function(){  
+                           num.value += "3";
+                        }//b3
+                        
+                        
+                        document.getElementById("bIgual").onclick=function(){  
+                            n2 = parseInt(num.value);
+                            switch(ope){
+                                case "+":
+                                    num.value =n1 + n2;
+                                    break;
+                                    
+                            }//switch
+                            
+                                
+                        }//bIgual
+                     
+                        document.getElementById("b+").onclick=function(){  
+                            n1 = parseInt(num.value);
+                            num.value="+";
+                            ope.this.value;
+                            
+                        }//b+
+                    
+                       
+                 
+                       
+                    } //principal
+            
+                    </script>
+                    
+                	
+                	<tr>
+                	
+                		<td colspan="4"><input readonly type="text" id="TxtRes"></td>
+                	</tr><!-- primera fila -->
+                	<?php
+                	//arreglo en php 
+                	
+                	?>
+                	
+                	<tr>
+                		<td><input type="button" id="b1" value="1"></td>
+                		<td><input type="button" id="b2" value="2"></td>
+                		<td><input type="button" id="b3" value="3"></td>
+                		<td><input type="button" id="b+" value="+"></td>
+                	</tr><!-- segunda fila -->
+                	<tr>
+                		<td><input type="button" id="b4" value="4"></td>
+                		<td><input type="button" id="b5" value="5"></td>
+                		<td><input type="button" id="b6" value="6"></td>
+                		<td><input type="button" id="bntMenos" value="-"></td>
+                	</tr><!-- tercera fila -->
+                	<tr>
+                		<td><input type="button" id="b7" value="7"></td>
+                		<td><input type="button" id="b8" value="8"></td>
+                		<td><input type="button" id="b9" value="9"></td>
+                		<td><input type="button" id="bntMult" value="*"></td>
+                	</tr><!-- cuarta fila -->
+                	<tr>
+                		<td><input type="button" id="b0" value="0"></td>
+                		<td><input type="button" id="bC" value="C"></td>
+                		<td><input type="button" id="bIgual" value="="></td>
+                		<td><input type="button" id="bntDiv" value="/"></td>
+                	</tr><!-- quinta fila -->
+                </table>
+        	</form>
+        </body>
+</html>
